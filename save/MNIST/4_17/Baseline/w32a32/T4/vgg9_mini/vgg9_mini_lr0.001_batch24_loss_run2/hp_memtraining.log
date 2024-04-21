@@ -1,0 +1,150 @@
+Namespace(model='vgg9_mini', workers=10, epochs=200, start_epoch=0, lr=0.001, print_freq=10, T=4, means=1.0, lamb=0.9, batch_size=24, optimizer='adam', lr_sch='cos', dataset='MNIST', data_path='/share/seo/snn/pt/dvscifar10/T10/', train_dir='./data/', val_dir='./data/', save_dir='./data/', seed=1000, local_rank=0, save_path='./save/MNIST/4_17/Baseline/w32a32/T4/vgg9_mini/vgg9_mini_lr0.001_batch24_loss_run2/hp_mem', log_file='training.log', fine_tune=False, resume='', evaluate=False)
+VGGSNN_MINI(
+  (features): Sequential(
+    (0): SConv(
+      (fwd): SeqToANNContainer(
+        (module): Sequential(
+          (0): QConv2d(
+            1, 8, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1)
+            (wq): TernW(nbit=2)
+            (aq): Identity()
+          )
+          (1): BatchNorm2d(8, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (act): QLIFSpike()
+      (pool): Identity()
+    )
+    (1): SeqToANNContainer(
+      (module): AvgPool2d(kernel_size=2, stride=2, padding=0)
+    )
+    (2): SConv(
+      (fwd): SeqToANNContainer(
+        (module): Sequential(
+          (0): QConv2d(
+            8, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1)
+            (wq): TernW(nbit=2)
+            (aq): Identity()
+          )
+          (1): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (act): QLIFSpike()
+      (pool): Identity()
+    )
+    (3): SeqToANNContainer(
+      (module): AvgPool2d(kernel_size=2, stride=2, padding=0)
+    )
+  )
+  (classifier): SeqToANNContainer(
+    (module): Linear(in_features=784, out_features=10, bias=True)
+  )
+)
+Training Start!
+ Model=vgg9_mini
+ Optimizer=adam
+----  --------  ------------  ------------  ------------  ------------
+  ep        lr    train_loss    train_top1    valid_loss    valid_top1
+----  --------  ------------  ------------  ------------  ------------
+   1    0.0010        0.2372       55.2783        2.1151       81.5200
+   2    0.0010        0.2227       72.8417        2.0943       77.8300
+   3    0.0010        0.2218       77.2567        2.0802       85.6300
+   4    0.0010        0.2213       78.5833        2.0763       86.1800
+Namespace(model='vgg9_mini', workers=10, epochs=200, start_epoch=0, lr=0.001, print_freq=10, T=4, means=1.0, lamb=0.9, batch_size=24, optimizer='adam', lr_sch='cos', dataset='MNIST', data_path='/share/seo/snn/pt/dvscifar10/T10/', train_dir='./data/', val_dir='./data/', save_dir='./data/', seed=1000, local_rank=0, save_path='./save/MNIST/4_17/Baseline/w32a32/T4/vgg9_mini/vgg9_mini_lr0.001_batch24_loss_run2/hp_mem', log_file='training.log', fine_tune=False, resume='', evaluate=False)
+VGGSNN_MINI(
+  (features): Sequential(
+    (0): SConv(
+      (fwd): SeqToANNContainer(
+        (module): Sequential(
+          (0): QConv2d(
+            1, 8, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1)
+            (wq): TernW(nbit=2)
+            (aq): Identity()
+          )
+          (1): BatchNorm2d(8, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (act): QLIFSpike()
+      (pool): Identity()
+    )
+    (1): SeqToANNContainer(
+      (module): AvgPool2d(kernel_size=2, stride=2, padding=0)
+    )
+    (2): SConv(
+      (fwd): SeqToANNContainer(
+        (module): Sequential(
+          (0): QConv2d(
+            8, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1)
+            (wq): TernW(nbit=2)
+            (aq): Identity()
+          )
+          (1): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (act): QLIFSpike()
+      (pool): Identity()
+    )
+    (3): SeqToANNContainer(
+      (module): AvgPool2d(kernel_size=2, stride=2, padding=0)
+    )
+  )
+  (classifier): SeqToANNContainer(
+    (module): Linear(in_features=784, out_features=10, bias=True)
+  )
+)
+Training Start!
+ Model=vgg9_mini
+ Optimizer=adam
+----  --------  ------------  ------------  ------------  ------------
+  ep        lr    train_loss    train_top1    valid_loss    valid_top1
+----  --------  ------------  ------------  ------------  ------------
+   1    0.0010        0.2372       55.2783        2.1151       81.5200
+Namespace(model='vgg9_mini', workers=10, epochs=200, start_epoch=0, lr=0.001, print_freq=10, T=4, means=1.0, lamb=0.9, batch_size=24, optimizer='adam', lr_sch='cos', dataset='MNIST', data_path='/share/seo/snn/pt/dvscifar10/T10/', train_dir='./data/', val_dir='./data/', save_dir='./data/', seed=1000, local_rank=0, save_path='./save/MNIST/4_17/Baseline/w32a32/T4/vgg9_mini/vgg9_mini_lr0.001_batch24_loss_run2/hp_mem', log_file='training.log', fine_tune=False, resume='', evaluate=False)
+VGGSNN_MINI(
+  (features): Sequential(
+    (0): SConv(
+      (fwd): SeqToANNContainer(
+        (module): Sequential(
+          (0): QConv2d(
+            1, 8, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1)
+            (wq): TernW(nbit=2)
+            (aq): Identity()
+          )
+          (1): BatchNorm2d(8, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (act): QLIFSpike()
+      (pool): Identity()
+    )
+    (1): SeqToANNContainer(
+      (module): AvgPool2d(kernel_size=2, stride=2, padding=0)
+    )
+    (2): SConv(
+      (fwd): SeqToANNContainer(
+        (module): Sequential(
+          (0): QConv2d(
+            8, 16, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1)
+            (wq): TernW(nbit=2)
+            (aq): Identity()
+          )
+          (1): BatchNorm2d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+        )
+      )
+      (act): QLIFSpike()
+      (pool): Identity()
+    )
+    (3): SeqToANNContainer(
+      (module): AvgPool2d(kernel_size=2, stride=2, padding=0)
+    )
+  )
+  (classifier): SeqToANNContainer(
+    (module): Linear(in_features=784, out_features=10, bias=True)
+  )
+)
+Training Start!
+ Model=vgg9_mini
+ Optimizer=adam
+----  --------  ------------  ------------  ------------  ------------
+  ep        lr    train_loss    train_top1    valid_loss    valid_top1
+----  --------  ------------  ------------  ------------  ------------
+   1    0.0010        0.2372       55.2783        2.1151       81.5200

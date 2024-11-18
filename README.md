@@ -25,8 +25,8 @@ Neuromorphic Computing Hardware Design Course Semester Project: **SNN-based Hard
 
 ### Prerequisites
 - Python >= 3.8
-- PyTorch >= 1.12
-- CUDA (Optional, for GPU acceleration)
+- PyTorch >= 1.9
+- CUDA (Optional, for GPU acceleration) 12.1
 
 ### Install Required Packages
 Clone the repository and install dependencies:
